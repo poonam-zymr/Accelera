@@ -1,0 +1,9 @@
+echo 250000 #Bytes Tx
+echo 500000  #Bytes Rx
+echo 2000    #Frames Tx
+echo 5000    #Frames Rx
+echo 0       #Broadcast Frames Tx
+echo 0       #Broadcast Frames Rx
+echo 0       #Multicast Frames Tx
+echo 0       #Multicast Frames Rx
+echo 1       #Number of Clients

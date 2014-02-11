@@ -1,0 +1,18 @@
+echo "Station 84:a6:c8:7d:db:01 (on wlan0)"           #Mac address of wifi client
+echo "        inactive time:  650 ms"                 #Inactive time
+echo "        rx bytes:       500000"                 #Rx Bytes
+echo "        rx packets:     5000"                  #Rx Packets
+echo "        tx bytes:       250000"                     #Tx Bytes
+echo "        tx packets:     2000"                      #Tx Packets
+echo "        tx retries:     0"                      #Tx Retries
+echo "        tx failed:      0"                      #Tx Failed
+echo "        signal:         -43 [-43, -58] dBm"     #signal strength current [min, max] dBm
+echo "        signal avg:     -42 [-42, -57] dBm"     #signal avg current [min, max] dBm
+echo "        tx bitrate:     1.0 MBit/s"             #Tx Bitrate
+echo "        rx bitrate:     6.0 MBit/s"             #Rx Bitrate
+echo "        authorized:     yes"                    #Authorized
+echo "        authenticated:  yes"                    #Authenticated
+echo "        preamble:       short"                  #Preamble
+echo "        WMM/WME:        yes"                    #Multimedia Extensions
+echo "        MFP:            no"
+echo "        TDLS peer:      no"

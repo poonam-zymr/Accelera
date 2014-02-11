@@ -1,0 +1,17 @@
+echo 250000   #Bytes Tx
+echo 500000    #Bytes Rx
+echo 2000     #Frames Tx
+echo 5000     #Frames Rx
+echo 20      #Error CRC
+echo 5       #Error FCS
+echo 0       #Frames Broadcast Tx
+echo 0       #Frames Broadcast Rx
+echo 0       #Frames Multicast Tx
+echo 0       #Frames Multicast Rx
+echo 0       #Beacon Rx
+echo 0       #Noise Floor
+echo 0       #Channel Active
+echo 20       #Channel Busy
+echo 0       #Channel Busy Rx
+echo 0       #Channel Busy Tx
+

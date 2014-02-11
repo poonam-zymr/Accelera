@@ -1,0 +1,4 @@
+# Set BASEDIR like this:
+# export BASEDIR=/home/accelera/acc/cloud/cm
+
+export PYTHONPATH=$BASEDIR:$BASEDIR/registration:$BASEDIR/utils:$BASEDIR/apdetails:$BASEDIR/teardown
