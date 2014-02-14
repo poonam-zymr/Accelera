@@ -1,7 +1,7 @@
 #Results = "/home/accelera/jenkins/workspace/results"
 Results = "D:\\eclipse_workspace\\cm-qa\\results"
 
-input_file_path = "D:\\eclipse_workspace\\cm-qa"
+input_file_path = "D:\\eclipse_workspace\\Accelera_Tests\\Accelera\\cm-qa"
 
 vm_url = "http://shrushti-vm-test"
 
@@ -19,7 +19,9 @@ real_ap_ip = '172.16.0.65'
 
 db_to_be_used = 'shrushti-vm-test'
 
-ap_name = "z3-ap-81"
+ap_name = "z3-ap_65"
+
+config_name = "ap_config"
 
 client_name = "Intel_Corporate-7D-DB-01"
 

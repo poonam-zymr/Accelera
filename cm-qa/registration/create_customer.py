@@ -30,6 +30,13 @@ class TestCreateCustomer(unittest.TestCase):
         driver.find_element_by_id("btnLogin").click()
 
         #driver.get(self.base_url + "/var/var_dashboard")
+        time.sleep(10)
+        print "Clicking VAR filter dropdown"
+        dropdown = driver.find_element_by_id("varFilter")
+        for option in dropdown.find_elements_by_tag_name("option"):
+            if option.text == columns['var_business_name'][0]:
+                option.click()
+                time.sleep(5)
         driver.find_element_by_id("btnAddCustomer").click()
         driver.find_element_by_id("name").clear()
         driver.find_element_by_id("name").send_keys(columns['var_business_name'][1])

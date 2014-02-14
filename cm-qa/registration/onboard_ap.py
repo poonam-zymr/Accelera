@@ -29,6 +29,12 @@ class TestOnboardAP(unittest.TestCase):
         driver.find_element_by_id("password").send_keys(columns['password'][0])
         driver.find_element_by_id("btnLogin").click()
         time.sleep(10)
+        print "Clicking VAR filter dropdown"
+        dropdown = driver.find_element_by_id("varFilter")
+        for option in dropdown.find_elements_by_tag_name("option"):
+            if option.text == columns['var_business_name'][0]:
+                option.click()
+                time.sleep(5)
         print "Clickin Customers dropdown"
         dropdown = driver.find_element_by_id("customerFilter")
         for option in dropdown.find_elements_by_tag_name("option"):

@@ -310,5 +310,35 @@ def search_field_in_client_last_collection(search_field, client_mac):
         print "Client" + client_mac + " not found in database!"
     return searched_item
     
-    
-    
+def search_field_in_configuration_collection(search_field, config_name):
+    print ("Searching %s for config %s in configuration collection" % (search_field, config_name))
+    mongo_configuration_collection = retrieve_collection(properties.config_collection_name)
+    try:
+        result = False
+        for item in mongo_configuration_collection.find({'config_name': config_name}):
+            result = True
+            print("Verifying %s for config: %s in database" % (search_field, config_name))
+            searched_item = item[search_field]
+            print("%s for config %s is = %s" % (search_field, config_name, searched_item))
+        if result == False:
+            assert result, "Search parameter " + search_field + "not present for configuration!" + config_name
+    except AssertionError:
+        print "Configuration" + config_name + " not found in database!"
+    return searched_item
+
+def search_field_in_ap_collection(search_field, apid):
+    print ("Searching %s for AP %s in ap collection" % (search_field, apid))
+    mongo_ap_collection = retrieve_collection(properties.ap_collection_name)
+    searched_item = None
+    try:
+        result = False
+        for item in mongo_ap_collection.find({'apid': apid}):
+            result = True
+            print("Verifying %s for ap: %s in database" % (search_field, apid))
+            searched_item = item[search_field]
+            print("%s for config %s is = %s" % (search_field, apid, searched_item))
+        if result == False:
+            assert result, "Search parameter " + search_field + "not present for AP!" + apid
+    except AssertionError:
+        print "AP" + apid + " not found in database!"
+    return searched_item    

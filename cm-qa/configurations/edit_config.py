@@ -101,10 +101,12 @@ class TestEditConfig(unittest.TestCase):
                     parameter = ("wireless.@wifi-iface[%s].ssid=%s" % (cnt, ssid1))
                 elif cnt > 2:
                     parameter = ("wireless.@wifi-iface[%s].ssid=%s" % (cnt, ssid2))
+                cnt = cnt + 1
             if parameter == each:
                 result = True
             else:
                 result = False
+                
         try:
             self.assertEqual(result, False, "SSID's are not re-pushed correctly to AP.")
         except AssertionError as e: self.verificationErrors.append(str(e))

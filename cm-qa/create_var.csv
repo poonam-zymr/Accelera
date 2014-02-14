@@ -1,1 +1,5 @@
-var_business_name,street_addres_1,street_addres_2,city,state,zip,country,first_name,last_name,email,password,confirm_passwordAccelera Mobile Broadband Inc.,3255 Scott Blvd Bldg 2,Suite 110,Santa Clara,California,CA 95054,Unites States,Accelera Mobile,Broadband Inc,accelera@acceleramb.com,welcome,welcomeAccelera Mobile Broadband Inc.,3255 Scott Blvd Bldg 2,Suite 110,Santa Clara,California,CA 95054,Unites States,Accelera Mobile,Broadband Inc,accelera_cust@acceleramb.com,welcome,welcomeAccelera-SantaClara,3255 Scott Blvd Bldg 2,Suite 110,Santa Clara,California,CA 95054,Unites States
+var_business_name,street_addres_1,street_addres_2,city,state,zip,country,first_name,last_name,email,password,confirm_password
+Tata Communications,3255 Scott Blvd Bldg 2,Suite 110,Santa Clara,California,CA 95054,Unites States,Tata,Communications,tata@acceleramb.com,welcome,welcome
+Starbucks Mumbai,3255 Scott Blvd Bldg 2,Suite 110,Santa Clara,California,CA 95054,Unites States,Starbucks,"Mumbai
+",starbucks@acceleramb.com,welcome,welcome
+Palm_Spring_Center,3255 Scott Blvd Bldg 2,Suite 110,Santa Clara,California,CA 95054,Unites States,,,,,

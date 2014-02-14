@@ -28,8 +28,13 @@ class TestVerifyVARDashboard(unittest.TestCase):
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys(columns['password'][0])
         driver.find_element_by_id("btnLogin").click()
-        time.sleep(5)
-      
+        time.sleep(10)
+        print "Clicking VAR filter dropdown"
+        dropdown = driver.find_element_by_id("varFilter")
+        for option in dropdown.find_elements_by_tag_name("option"):
+            if option.text == columns['var_business_name'][0]:
+                option.click()
+                time.sleep(5)
         def get_text_excluding_children(driver, element):     
             return driver.execute_script("""     return jQuery(arguments[0]).contents().filter(function() {         return this.nodeType == Node.TEXT_NODE;     }).text();     """, element)
             #cust = get_text_excluding_children(driver, driver.find_element_by_css_selector("#cust_name_0"))
@@ -65,22 +70,22 @@ class TestVerifyVARDashboard(unittest.TestCase):
                     no_of_info_events = driver.find_element_by_css_selector(informative_event_id).get_attribute("innerHTML").strip()
                     print "No. of Informative Events = " +no_of_info_events
                 except NoSuchElementException:
-                    return False
-                return True
+                    print "0 Informative Events!"
                 try:
                     critical_event_id = "#Critical_" + str(i) + " span.eventCountBox"   
                     no_of_critical_events = driver.find_element_by_css_selector(critical_event_id).get_attribute("innerHTML").strip()
                     print "No. of Critical Events = " +no_of_critical_events
                 except NoSuchElementException:
-                    return False
-                return True
+                    print "0 Critical Events!"
                 try:
                     important_event_id = "#Important_" + str(i) + " span.eventCountBox"
                     no_of_imp_events = driver.find_element_by_css_selector(important_event_id).get_attribute("innerHTML").strip()
                     print "No. of Important Events = " +no_of_imp_events
                 except NoSuchElementException:
-                    return False
-                return True
+                    print "0 Important Events!"
+                break
+            else:
+                continue
         
     def tearDown(self):
         self.driver.quit()
